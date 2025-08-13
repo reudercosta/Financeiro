@@ -15,6 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Base de dados de tratamentos e preços
     const tratamentos = {
+        'Cirurgia Para Implante - IRF': {
+            'Implante Nacional': 700,
+            'Implante Importado': 900,
+            'Enxerto Importado BoneCeramic/Cerabone': 900,
+            'Enxerto Importado BoneCeramic/Cerabone + Membrana': 1500,
+            'Gia Cirúrgico (Até 3 elementos)': 200,
+            'Gia Cirúrgico Hemiarco': 250,
+            'Gia Cirúrgico Total': 350,
+            'Prótese Total Com Palato Incolor e Dentes Nacionais': 750,
+            'Prótese Total Com Palato Incolor e Dentes Importados': 950
+        },
         'Cirurgia Oral': {
             'Extração Simples': 150,
             'Extração de Siso': 350,
@@ -24,6 +35,28 @@ document.addEventListener('DOMContentLoaded', () => {
             'Frenectomia': 300,
             'Biópsia': 250,
             'Remoção de Cisto': 800
+        },
+        'Prótese - IRF': {
+            'Coroa S/ Implante Nacional': 1180,
+            'Coria Próvisoria S/ Implante Importado': 190,
+            'Coroa S/ Implante Nacional': 1390,
+            'Coria Próvisoria S/ Implante Importado': 240,
+            'Enxerto Importado BoneCeramic/Cerabone': 900,
+            'Overdenture Com Implante Nacional': 3430,
+            'Overdenture Com Implante Nacional': 4430,
+            'Protocolo Inferior Nacional Em Resina (Sobre 4 implantes)': 5900,
+            'Taxa de Captura Protocolo Inferior Nacional': 800,
+            'Protocolo Inferior Importado Em Resina (Sobre 4 implantes)': 6900,
+            'Taxa de Captura Protocolo Inferior Importado': 850,
+            'Protocolo Superior Nacional Em Resina (Sobre 6 implantes)': 6900,
+            'Taxa de Captura Protocolo Superior Nacional': 1000,
+            'Protocolo Superior Importado Em Resina (Sobre 6 implantes)': 8900,
+            'Taxa de Captura Protocolo Superior Nacional': 1280,
+            'Protocolo Superior Nacional Em Cerâmica (Sobre 6 implantes)': 10900,
+            'Protocolo Superior Nacional Em Cerâmica (Sobre 6 implantes)': 12900,
+            'Pôntico Cerâmico' : 850,
+            'Carga Imediáta Laboratorial': 950
+
         },
         'Implantes Dentários': {
             'Implante Nacional (Neodent)': 1500,
@@ -39,8 +72,71 @@ document.addEventListener('DOMContentLoaded', () => {
             'Coroa sobre Implante (Importada)': 1200,
             'Prótese Total sobre Implantes': 8000,
             'Prótese Protocolo': 12000
-        }
-    };
+    },
+    'Procedimentos Preventivos': {
+        'Limpeza Dental': 250,
+        'Aplicação de Flúor': 150,
+        'Selantes Dentais': 200
+    },
+    'Dentística': {
+        'Restauração em Amálgama': 120,
+        'Restauração em Resina (1 face)': 150,
+        'Restauração em Resina (2 faces)': 200,
+        'Restauração em Resina (3 faces)': 250,
+        'Tratamento de Cárie': 180,
+        'Clareamento Dental Caseiro': 600,
+        'Clareamento Dental a Laser': 1000,
+        'Faceta Direta em Resina': 400,
+        'Recobrimento de Cárie Profunda': 200
+    },
+    'Prótese': {
+        'Coroa em Metalocerâmica': 800,
+        'Coroa em Zircônia': 1200,
+        'Prótese Parcial Removível (PPR)': 1500,
+        'Prótese Total (Dentadura)': 2000,
+        'Prótese Flexível': 1800,
+        'Overdenture sobre Implante': 3500,
+        'Faceta em Cerâmica': 1000,
+        'Inlay/Onlay em Cerâmica': 900
+    },
+    'Periodontia': {
+        'Raspagem e Alisamento Radicular (1 sessão)': 200,
+        'Gengivoplastia': 400,
+        'Enxerto Gengival': 1500,
+        'Regeneração Óssea Guiada': 2000,
+        'Alongamento de Coroa Clínica': 500,
+        'Plástica de Freio Labial': 300,
+        'Tratamento de Gengivite': 250,
+        'Tratamento de Periodontite': 800
+    },
+    'Ortodontia': {
+        'Aparelho Fixo Metálico': 2500,
+        'Aparelho Fixo Estético': 3500,
+        'Aparelho Autoligado': 4000,
+        'Alinhador Invisível (por etapa)': 5000,
+        'Contenção Fixa': 300,
+        'Contenção Móvel': 400,
+        'Ortopedia Funcional dos Maxilares': 2000,
+        'Manutenção de Aparelho': 150
+    },
+    'Endodontia': {
+        'Tratamento de Canal (Unirradicular)': 500,
+        'Tratamento de Canal (Birradicular)': 700,
+        'Tratamento de Canal (Multirradicular)': 900,
+        'Retratamento de Canal': 1000,
+        'Pulpotomia': 300,
+        'Pulpectomia': 350
+    },
+    'Odontopediatria': {
+        'Aplicação de Flúor': 50,
+        'Selante de Fissura': 80,
+        'Restauração em Dente Decíduo': 120,
+        'Pulpotomia em Dente de Leite': 200,
+        'Coroa em Dente de Leite': 250,
+        'Tratamento de Traumatismo': 300
+    }
+
+  };
 
     // Inicialização
     init();
@@ -102,6 +198,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         <option value="">Selecione a categoria</option>
                         <option value="Cirurgia Oral">Cirurgia Oral</option>
                         <option value="Implantes Dentários">Implantes Dentários</option>
+                        <option value="Cirurgia Para Implante - IRF">Cirurgia Para Implante - IRF</option>
+                        <option value="Prótese - IRF">Prótese - IRF</option>
+                        <option value="Procedimentos Preventivos">Procedimentos Preventivos</option>
+                        <option value="Dentística">Dentística</option>
+                        <option value="Prótese">Prótese</option>
+                        <option value="Periodontia">Periodontia</option>
+                        <option value="Ortodontia">Ortodontia</option>
+                        <option value="Odontopediatria">Odontopediatria</option>
+                       
+
                     </select>
                 </div>
 
