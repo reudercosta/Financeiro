@@ -28,14 +28,23 @@ document.addEventListener("DOMContentLoaded", () => {
             'Prótese Total Com Palato Incolor e Dentes Importados': 950
         },
         'Cirurgia Oral': {
-            'Extração Simples': 150,
-            'Extração de Siso': 350,
-            'Extração de Siso Incluso': 500,
+            'Extração Simples': 250,
+            'Extração de Siso': 450,
+            'Extração de Siso Semi-Incluso': 500,
+            'Extração de Siso Incluso': 800,
             'Apicectomia': 600,
             'Cirurgia Periodontal': 400,
-            'Frenectomia': 300,
-            'Biópsia': 250,
+            'Biópsia': 350,
             'Remoção de Cisto': 800
+        },
+        'Consulta Clínica':{
+            'Consulta' : 150,
+            'Consulta + Profilaxia': 250,
+            'Radiografia': 50
+        },
+        'Prevenção':{
+            'Profilaxia + Raspagem + Fluor' : 250,
+            'Profilaxia + Fluor': 180
         },
         'Prótese - IRF': {
             'Coroa S/ Implante Nacional': 1180,
@@ -80,34 +89,45 @@ document.addEventListener("DOMContentLoaded", () => {
         'Selantes Dentais': 200
     },
     'Dentística': {
-        'Restauração em Amálgama': 120,
-        'Restauração em Resina (1 face)': 150,
-        'Restauração em Resina (2 faces)': 200,
-        'Restauração em Resina (3 faces)': 250,
-        'Tratamento de Cárie': 180,
-        'Clareamento Dental Caseiro': 600,
-        'Clareamento Dental a Laser': 1000,
+        'Fachamento de Diastema': 500,
+        'Restauração em Amálgama': 100,
+        'Restauração em Resina (1 face)': 200,
+        'Restauração em Resina (2 faces)': 250,
+        'Restauração em Resina (3 faces)': 280,
+        'Reconstrução por elemento': 300,
+        'Selamento, 4 Sessões': 800,
         'Faceta Direta em Resina': 400,
         'Recobrimento de Cárie Profunda': 200
     },
     'Prótese': {
-        'Coroa em Metalocerâmica': 800,
-        'Coroa em Zircônia': 1200,
-        'Prótese Parcial Removível (PPR)': 1500,
-        'Prótese Total (Dentadura)': 2000,
+        'Coroa em Metalocerâmica': 1600,
+        'Coroa em Zircônia': 1400,
+        'Coroa Provisória' : 350,
+        'Prótese Parcial Removível (PPR)': 1800,
+        'Prótese Total (Dentadura)': 1700,
         'Prótese Flexível': 1800,
         'Overdenture sobre Implante': 3500,
-        'Faceta em Cerâmica': 1000,
-        'Inlay/Onlay em Cerâmica': 900
+        'Faceta em Cerâmica': 1600,
+        'Faceta em Porcelana' : 2000,
+        'Inlay/Onlay em Cerâmica': 700,
+        'Perereca': 1000,
+        'Remoção de Prótese': 200,
+        'Pino p/ Elemento': 300,
+        'Placa Oclusão / Miorelaxante': 1000,
+        'Coroa Porcelana -  MetalFree': 2000,
+        'Cimentação': 200,
+        'Pino Vibra de Vidro p/ Elemento': 400
     },
     'Periodontia': {
         'Raspagem e Alisamento Radicular (1 sessão)': 200,
-        'Gengivoplastia': 400,
+        'Gengivoplastia, por elemento': 200,
+        'Gengivectomia + Osteotomia, por elemento': 300,
         'Enxerto Gengival': 1500,
         'Regeneração Óssea Guiada': 2000,
-        'Alongamento de Coroa Clínica': 500,
+        'Aumento de Coroa Clínica': 300,
         'Plástica de Freio Labial': 300,
         'Tratamento de Gengivite': 250,
+        'Reposicionamento labial': 1000,
         'Tratamento de Periodontite': 800
     },
     'Ortodontia': {
@@ -121,10 +141,13 @@ document.addEventListener("DOMContentLoaded", () => {
         'Manutenção de Aparelho': 150
     },
     'Endodontia': {
-        'Tratamento de Canal (Unirradicular)': 500,
-        'Tratamento de Canal (Birradicular)': 700,
-        'Tratamento de Canal (Multirradicular)': 900,
-        'Retratamento de Canal': 1000,
+        'Tratamento de Canal (Unirradicular)': 800,
+        'Tratamento de Canal (Birradicular)': 1100,
+        'Tratamento de Canal (Multirradicular)': 1500,
+        'Retratamento de Canal (Unirradicular)': 1000,
+        'Retratamento de Canal (Multirradicular)': 1500,
+        'Urgência Endodontica': 250,
+        'Cirurgia Paraendodontica': 1000,
         'Pulpotomia': 300,
         'Pulpectomia': 350
     },
@@ -200,6 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <option value="">Selecione a categoria</option>
                         <option value="">Selecione a categoria</option>
                         <option value="Cirurgia Oral">Cirurgia Oral</option>
+                        <option value="Consulta Clínica">Consulta Clínica</option>
+                        <option value="Prevenção">Prevenção</option>
                         <option value="Implantes Dentários">Implantes Dentários</option>
                         <option value="Cirurgia Para Implante - IRF">Cirurgia Para Implante - IRF</option>
                         <option value="Prótese - IRF">Prótese - IRF</option>
