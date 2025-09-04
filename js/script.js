@@ -230,6 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <option value="Prótese - IRF">Prótese - IRF</option>
                         <option value="Procedimentos Preventivos">Procedimentos Preventivos</option>
                         <option value="Dentística">Dentística</option>
+                        <option value="Endodontia">Endodontia</option>
                         <option value="Prótese">Prótese</option>
                         <option value="Periodontia">Periodontia</option>
                         <option value="Ortodontia">Ortodontia</option>
